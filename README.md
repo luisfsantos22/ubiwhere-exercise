@@ -34,13 +34,11 @@ For API REST Documentation, it was used Swagger. With the project running go to:
 ```
 <ip_address:5000>/swagger/
 ```
-Note: To test from Swagger, on login, copy the token to the 'Authorize' button with 'JWT ' on the beggining.
+Note: To test from Swagger, on login, copy the token to the 'Authorize' button with 'JWT ' on the begginning.
 
 **Instructions to run this project**
 
-As two different environments (development and production) are required, there is two script files, one for each environment. So, depending on which environment do you want, it can be ran ```script_run_exercise_<env_type>.sh```. The script will use environment variables, and docker-compose up of the file that contains both db and web services.
-OR
-As two different environments (development and production) are required, it was created a docker container for production purpose. To run it, it has be to executed a script file. So, depending on which environment do you want, the project can be ran with the script ```script_run_exercise_prod.sh``` or with ```python .\manage.py runserver 127.0.0.1:<port>```. In case of production environment, the script will use environment variables, and docker-compose up of the file that contains db, web and nginx services. The port of Nginx its **5000** by default.
+As two different environments (development and production) are required, it was created a docker container for each environment. So, depending on which environment do you want, it can be ran ```script_run_exercise_<env_type>.sh``` or, if you want to run the project locally (using development variables), you need to run ```python .\manage.py runserver 127.0.0.1:<port>```. In case of run the project in containers, the script will use environment variables and do 'docker-compose up' of the file that contains db, web and nginx services. The port of Nginx its **5000** by default.
 
 The pre-requirements are:
 - Docker installed
@@ -58,13 +56,15 @@ Having the containers running, or the project running on development, its possib
 ```
 https://www.getpostman.com/collections/54597fa59c2b1eca57a6
 ```
-There is a environment associated 'dev-ubiwhere-env' where the url and token are defined. By default, the url is **127.0.0.1** but, if the docker-machine ip its different, you need to change it manually. This is needed for development purposes as well. In settings.py, the Database HOST which its appointed to **127.0.0.1**. So, in case of need, change on both sides.
+There is a environment associated 'dev-ubiwhere-env' where the url and token are defined. By default, the url is **127.0.0.1** but, if the docker-machine ip its different, you need to change it manually. This is needed for development purposes as well. In settings.py, the Database HOST is appointed to **127.0.0.1**, so, in case of need, change on both sides.
 
 When creating the project container, a superuser is created by default. The credentials are:
 
 **username:** admin
 
 **password:** ubiwherepwd
+
+Note: Running the project locally, you need to create a superuser on command line ```python manage.py createsuperuser```
 
 I hope that everyhting its ok and functional.
 Have a good weekend!
