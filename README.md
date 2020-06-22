@@ -38,7 +38,7 @@ Note: To test from Swagger, on login, copy the token to the 'Authorize' button w
 
 **Instructions to run this project**
 
-As two different environments (development and production) are required, it was created a docker container for each environment. So, depending on which environment do you want, it can be ran ```script_run_exercise_<env_type>.sh``` or, if you want to run the project locally (using development variables), you need to, first, activate virtual environment, run requirements.txt and then run ```python .\manage.py runserver 127.0.0.1:<port>``` (if you're running it in windows, install psycopg2 by pip). In case of run the project in containers, the script will use environment variables and do 'docker-compose up' of the file that contains db, web and nginx services. The port of Nginx its **5000** by default.
+As two different environments (development and production) are required, it was created a docker container for each environment. So, depending on which environment do you want, it can be ran ```script_run_exercise_<env_type>.sh``` or, if you want to run the project locally (using development variables), you need to, first, run the script (the databases are created with it), activate virtual environment, run requirements.txt and then run ```python .\manage.py runserver 127.0.0.1:<port>``` (if you're running it on windows, install psycopg2 by pip). In case of run the project in containers, the script will use environment variables and do 'docker-compose up' of the file that contains db, web and nginx services. The port of Nginx its **5000** by default.
 
 The pre-requirements are:
 - Docker installed
