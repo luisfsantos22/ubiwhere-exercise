@@ -50,8 +50,6 @@ cd <path_to_project_directory>
 ./script_run_exercise_prod.sh
 ```
 
-Having both containers running, we can go to Postman to test the endpoints ourselves. So, using the public link below, generated via Embed, it will rendered a Collection named 'Ubiwhere API REST' with three folders, where are all the endpoints, organized by modules.
-OR
 Having the containers running, or the project running on development, its possible to go to Postman to test the endpoints ourselves. So, using the public link below, generated via Embed, it will rendered a Collection named 'Ubiwhere API REST' with three folders, where are all the endpoints, organized by modules.
 ```
 https://www.getpostman.com/collections/54597fa59c2b1eca57a6
