@@ -1,0 +1,47 @@
+Models:
+    Occurencies:
+        ✔ description : string 
+        ✔ address : string 
+        ✔ geo_location : point
+        ✔ created_at : datetime 
+        ✔ modified_at : datetime 
+        ✔ category : enum 
+        ✔ state : enum 
+        ✔ author : string (fk-User) 
+
+Serializers:
+    ✔ Users 
+    ✔ Occurrences 
+    ✔ RegistSerializer 
+Views:
+    Authentication:
+        ✔ Regist a user 
+    Occurrences:
+        ✔ List all occurrences 
+        ✔ Get its own occurrences 
+        ✔ Create new occurrence 
+        ✔ Delete a specific occurrence 
+        ✔ Get one specific occurrence 
+        ✔ Update a specific occurrence state 
+        ✔ Update a specific occurrence info 
+        ✔ Filter occurrences (its associated with get 'List all occurrences') 
+    Users:
+        ✔ List all users 
+        ✔ Get a user 
+        ✔ Delete a user 
+        
+Authentication:
+    JWT:
+        ✔ Superuser 
+        ✔ Normal users 
+
+✔ Error Handlers 
+✔ Comment all methods 
+✔ Testes 
+✔ Documentation - Swagger 
+✔ Docker compose production 
+✔ Script to run everything automatically
+✔ Add project to GitHub with all the instructions on how to build and execute it. 
+
+Optional
+☐ Graphic Interface

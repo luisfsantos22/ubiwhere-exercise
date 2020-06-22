@@ -1,0 +1,41 @@
+version: "3"
+services:
+  db:
+    container_name: postgis-db
+    image: kartoza/postgis
+    volumes:
+      - ./home/dev/gis_db.sql
+      - ./home/prod/gis_db.sql
+    environment:
+      - POSTGRES_DBNAME=db-ubi-development,db-ubi-production
+      - POSTGRES_USER=ubiuser
+      - POSTGRES_PASS=geopwd
+    ports:
+      - "5432:5432"
+
+  web:
+    container_name: ubiwhere-api-${ENV}
+    build: .
+    restart: always
+    healthcheck:
+        test: ["CMD-SHELL", "pg_isready -U postgres"]
+        interval: 10s
+        timeout: 5s
+        retries: 5
+    environment:
+      - DJANGO_ENV=${ENV}
+      - POSTGRES_DBNAME=db-ubi-${ENV}
+      - POSTGRES_USER=ubiuser
+      - POSTGRES_PASS=geopwd
+      - POSTGRES_HOST=${DB_HOST}
+    expose:
+      - 8000
+    depends_on:
+      - db
+
+  nginx:
+    build: ./nginx
+    ports:
+      - 5000:80
+    depends_on:
+      - web
