@@ -52,7 +52,7 @@ cd <path_to_project_directory>
 
 Having the containers running, or the project running on development, its possible to go to Postman to test the endpoints ourselves. So, using the public link below, generated via Embed, it will rendered a Collection named 'Ubiwhere API REST' with three folders, where are all the endpoints, organized by modules.
 ```
-https://www.getpostman.com/collections/54597fa59c2b1eca57a6
+https://app.getpostman.com/run-collection/54597fa59c2b1eca57a6#?env%5Bdev-ubiwhere-env%5D=W3sia2V5IjoidXJsIiwidmFsdWUiOiJodHRwOi8vMTI3LjAuMC4xOjUwMDAiLCJlbmFibGVkIjp0cnVlfSx7ImtleSI6InRva2VuIiwidmFsdWUiOiJleUowZVhBaU9pSktWMVFpTENKaGJHY2lPaUpJVXpJMU5pSjkuZXlKMWMyVnlYMmxrSWpveUxDSjFjMlZ5Ym1GdFpTSTZJbUZrYldsdUlpd2laWGh3SWpveE5Ua3lOemcxTWpJeUxDSmxiV0ZwYkNJNkltRmtiV2x1UUdWNFlXMXdiR1V1WTI5dEluMC44cm1CTXRTUHFCN1JIdlc4cEJFUERIV3pBOXNVdGtYUl9SVzF6a1p1UEIwIiwiZW5hYmxlZCI6dHJ1ZX1d
 ```
 There is a environment associated 'dev-ubiwhere-env' where the url and token are defined. By default, the url is **127.0.0.1:5000** but, if the docker-machine ip its different, you need to change the ip manually (the port is always 5000 on the containers). The change of ip is needed for development purposes as well. In settings.py, the Database HOST is appointed to **127.0.0.1**, so, in case of need, change on both sides.
 
