@@ -38,7 +38,7 @@ Note: To test from Swagger, on login, copy the token to the 'Authorize' button w
 
 **Instructions to run this project**
 
-As two different environments (development and production) are required, it was created a docker container for each environment. So, depending on which environment do you want, it can be ran ```script_run_exercise_<env_type>.sh``` or, if you want to run the project locally (using development variables), you need to run ```python .\manage.py runserver 127.0.0.1:<port>```. In case of run the project in containers, the script will use environment variables and do 'docker-compose up' of the file that contains db, web and nginx services. The port of Nginx its **5000** by default.
+As two different environments (development and production) are required, it was created a docker container for each environment. So, depending on which environment do you want, it can be ran ```script_run_exercise_<env_type>.sh``` or, if you want to run the project locally (using development variables), you need to, first, activate virtual environment, run requirements.txt and then run ```python .\manage.py runserver 127.0.0.1:<port>``` (if you're running it in windows, install psycopg2 by pip). In case of run the project in containers, the script will use environment variables and do 'docker-compose up' of the file that contains db, web and nginx services. The port of Nginx its **5000** by default.
 
 The pre-requirements are:
 - Docker installed
@@ -54,7 +54,7 @@ Having the containers running, or the project running on development, its possib
 ```
 https://www.getpostman.com/collections/54597fa59c2b1eca57a6
 ```
-There is a environment associated 'dev-ubiwhere-env' where the url and token are defined. By default, the url is **127.0.0.1** but, if the docker-machine ip its different, you need to change it manually. This is needed for development purposes as well. In settings.py, the Database HOST is appointed to **127.0.0.1**, so, in case of need, change on both sides.
+There is a environment associated 'dev-ubiwhere-env' where the url and token are defined. By default, the url is **127.0.0.1:5000** but, if the docker-machine ip its different, you need to change the ip manually (the port is always 5000 on the containers). The change of ip is needed for development purposes as well. In settings.py, the Database HOST is appointed to **127.0.0.1**, so, in case of need, change on both sides.
 
 When creating the project container, a superuser is created by default. The credentials are:
 
