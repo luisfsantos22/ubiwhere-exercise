@@ -62,7 +62,7 @@ When creating the project container, a superuser is created by default. The cred
 
 **password:** ubiwherepwd
 
-Note: Running the project locally, you need to create a superuser on command line ```python manage.py createsuperuser```
+Note: Running the project locally, implies the creation of a superuser on command line ```python manage.py createsuperuser```
 
 I hope that everyhting its ok and functional.
 Have a good weekend!
